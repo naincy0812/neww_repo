@@ -1,0 +1,430 @@
+/* ----------  Customers page additions  ---------- */
+
+/* Page header (title + buttons) */
+.customers-header .dashboard-title {
+  font-size: 28px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 4px;
+  background: #8b5cf6;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.header-btn svg {
+  width: 14px;
+  height: 16px;
+}
+
+.header-btn:hover {
+  background: #9f7aea;
+}
+
+.header-btn:active {
+  transform: scale(0.97);
+}
+
+.customer-actions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  margin: 30px 20px 15px;
+  position: relative;
+  width: 200px;
+  display: flex;
+  padding: 7px 18px;
+  background: #8b5cf6;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.filter-btn svg {
+  width: 14px;
+  height: 16px;
+}
+
+.filter-btn:hover {
+  background: #9f7aea;
+}
+
+.filter-btn:active {
+  transform: scale(0.97);
+}
+
+/* 📱 Responsive Filter Button */
+@media (max-width: 600px) {
+  .filter-btn {
+    width: 100%;
+    padding: 6px 12px;
+    gap: 6px;
+    font-size: 0.95rem;
+    margin: 10px 12px;
+    justify-content: center;
+  }
+
+  .filter-btn svg {
+    width: 12px;
+    height: 14px;
+  }
+}
+
+.customer-search {
+  margin: 26px 30px 10px;
+  position: relative;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+.dashboard-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+/* .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+} */
+
+.customer-search input {
+  width: 100%;
+  padding: 10px 44px 10px 46px;
+  background: #1e293b;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  flex-grow: 1;
+}
+
+.customer-search .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  pointer-events: none;
+}
+
+.customer-search button {
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.customer-search button:hover {
+  background-color: #9f7aea;
+}
+
+.customers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 20px 30px 40px;
+}
+
+@media (max-width: 900px) {
+  .customers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+    padding: 14px 10px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .customers-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 8px 2vw 16px;
+  }
+}
+
+.customer-card {
+  position: relative;
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 22px 24px 26px;
+  color: #e2e8f0;
+  transition: transform 0.15s;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .customer-card {
+    padding: 16px 14px 18px;
+    font-size: 0.97rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .customer-card {
+    padding: 12px 12px 15px;
+    font-size: 0.93rem;
+  }
+}
+
+.customer-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-action {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.card-action:hover {
+  background: #475569;
+}
+
+.customer-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.industry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.industry-pill {
+  padding: 4px 12px;
+  border-radius: 18px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+}
+
+.dot-online {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.tech {
+  background: #06b6d4;
+}
+
+.retail {
+  background: #f59e0b;
+}
+
+.finance {
+  background: #3b82f6;
+}
+
+.software {
+  background: #a855f7;
+}
+
+.healthcare {
+  background: #10b981;
+}
+
+.manufacturing {
+  background: #d97706;
+}
+
+.education {
+  background: #6366f1;
+}
+
+.energy {
+  background: #f43f5e;
+}
+
+.telecom {
+  background: #14b8a6;
+}
+
+.default {
+  background: #64748b;
+}
+
+.customer-desc {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.customer-meta {
+  display: flex;
+  gap: 18px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.customer-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.filter-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.dropdown:hover .filter-dropdown {
+  display: flex;
+}
+
+.filter-dropdown select,
+.filter-dropdown input,
+.filter-dropdown button {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+.filter-dropdown button {
+  background-color: #8b5cf6;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-dropdown button:hover {
+  background-color: #9f7aea;
+}
+
+.options-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 150px;
+  z-index: 100;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+
+.options-dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.options-dropdown button {
+  background: none;
+  border: none;
+  color: #e2e8f0;
+  padding: 12px 16px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.options-dropdown button:hover {
+  background-color: #4b5563;
+}
+
+/* ---------- Responsive Tweaks (2025-06) ---------- */
+@media (max-width: 900px) {
+  /* Make search bar adapt when sidebar or actions wrap */
+  .customer-search {
+    width: calc(100% - 4vw);
+    margin: 12px 2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack header elements vertically */
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Ensure action buttons wrap nicely */
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Full-width search bar */
+  .customer-search {
+    width: 100%;
+    margin: 12px 0;
+  }
+
+  /* Vertical flow for combined filter/search controls */
+  .customer-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

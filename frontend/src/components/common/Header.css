@@ -1,0 +1,132 @@
+/* ---------- Header Base Styles ---------- */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: transparent;
+  position: relative;
+  z-index: 100;
+  flex-wrap: wrap; /* Allow wrap on smaller screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* NEW: wrapper to hold notification + profile together */
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .profile-wrapper {
+    gap: 10px;
+  }
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #8b5cf6;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.header-btn svg {
+  width: 14px;
+  height: 16px;
+}
+
+.header-btn:hover {
+  background: #9f7aea;
+}
+
+.header-btn:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Tablet: 768px to 1024px ---------- */
+@media (max-width: 1024px) {
+  .dashboard-header {
+    padding: 16px 16px;
+    margin-bottom: 18px;
+  }
+
+  .dashboard-title {
+    font-size: 1.75rem;
+  }
+
+  .header-actions {
+    gap: 14px;
+  }
+}
+
+/* ---------- Small Tablets & Mobile: 600px to 768px ---------- */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 12px;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .header-btn {
+    padding: 6px 14px;
+  }
+}
+
+/* ---------- Mobile: below 600px ---------- */
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 12px 4vw;
+    align-items: flex-start;
+  }
+
+  .dashboard-title {
+    font-size: 1.25rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .header-btn {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+}

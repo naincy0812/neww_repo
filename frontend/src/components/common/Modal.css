@@ -1,0 +1,79 @@
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000; /* ensure overlay above header/cards */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: fixed;
+  z-index: 5001; /* above overlay background */
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 50px 20px 20px 20px; /* Further increased top padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  width: 600px;
+  max-width: 95%;
+  max-height: 90vh; /* Ensure modal doesn't exceed viewport height */
+  overflow-y: auto; /* Allow scrolling if content is too large */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.modal-textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-textarea::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.modal-textarea::-webkit-scrollbar-thumb {
+  background-color: #475569; /* slate-600 */
+  border-radius: 6px;
+}
+
+.modal-textarea {
+  scrollbar-width: thin; /* firefox */
+  scrollbar-color: #475569 #0f172a;
+}
+
+.modal-header {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-close {
+  position: absolute;
+  top: 5px; /* Adjusted top position */
+  right: 5px; /* Adjusted right position */
+  font-size: 24px;
+  cursor: pointer;
+  color: #e2e8f0;
+}
+
+/* 📱 Responsive modal adjustments */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 40px 16px 16px;
+  }
+}
+

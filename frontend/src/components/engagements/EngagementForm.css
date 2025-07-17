@@ -1,0 +1,84 @@
+.engagement-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-field {
+  display: contents;
+  grid-column: span 1;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+
+  background-color: #1e293b;
+  color: #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.form-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #8b5cf6;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-actions button:hover {
+  background: #9f7aea;
+}
+
+.form-actions button + button {
+  margin-left: 8px;
+  background: #334155;
+}
+
+.form-actions button + button:hover {
+  background: #475569;
+}
+
+h3 {
+  grid-column: 1 / -1;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 600px) {
+  .engagement-form {
+    grid-template-columns: 1fr;
+  }
+  .engagement-form .form-field,
+  .engagement-form .form-field.full,
+  .engagement-form .status-toggle-container,
+  .engagement-form .form-actions {
+    grid-column: 1 / -1;
+  }
+}

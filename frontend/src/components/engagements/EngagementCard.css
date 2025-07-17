@@ -1,0 +1,192 @@
+/* EngagementCard.css */
+
+.engagement-card {
+  position: relative;
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 16px;
+  color: #e2e8f0;
+  transition: transform 0.15s;
+}
+
+.engagement-title {
+  margin-bottom: 12px;
+}
+
+.engagement-details {
+  margin-top: 16px;
+} 
+
+.engagement-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-action {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #334155;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.card-action:hover {
+  background: #475569;
+}
+
+/* @media (max-width: 1024px) {
+  .engagement-card {
+    width: calc(50% - 1%);
+  }
+} */
+
+@media (max-width: 768px) {
+  .engagement-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+}
+
+.engagement-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.engagement-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.engagement-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.engagement-type {
+  padding: 0 0.75rem;
+  height: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #8b5cf6;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.customer-name {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot-active {
+  background-color: #22c55e; /* green-500 */
+}
+
+.status-dot-yellow {
+  background-color: #f59e0b; /* amber-500 */
+}
+
+.status-dot-inactive {
+  background-color: #ef4444; /* red-500 */
+}
+
+.owner-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #e5e7eb;
+}
+
+.owner-icon {
+  font-size: 1rem;
+}
+
+.engagement-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  gap: 1rem;
+}
+
+.detail-row dt {
+  color: #9ca3af;
+}
+
+.detail-row dd {
+  color: #ffffff;
+}
+
+.engagement-docs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.doc-box {
+  flex: 1;
+  min-width: 180px;
+  background-color: #374151;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.doc-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.doc-box dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.engagement-summary {
+  font-size: 1rem;
+  color: #9ca3af;
+}
