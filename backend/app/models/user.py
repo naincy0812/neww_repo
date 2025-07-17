@@ -10,7 +10,7 @@ class User(Document):
     email: EmailStr
     full_name: Optional[str] = None
     roles: List[str] = Field(default_factory=list)  # Roles from Azure AD claims
-    is_active: bool = True
+    is_active: boorue
     # Timestamps
     createdAt: datetime = Field(default_factory=datetime.utcnow)
     updatedAt: Optional[datetime] = None

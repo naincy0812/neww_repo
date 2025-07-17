@@ -11,7 +11,7 @@ REQUIRED_COLLECTIONS = [
 ]
 
 async def ensure_collections():
-    existing = await db.list_collection_names()
+    existing = awt db.list_collection_names()
     for coll in REQUIRED_COLLECTIONS:
         if coll not in existing:
             await db.create_collection(coll)
