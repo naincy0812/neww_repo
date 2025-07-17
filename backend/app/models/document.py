@@ -4,7 +4,7 @@ from datetime import datetime
 from bson import ObjectId
 from beanie import Document
 
-class AIExtracted(BaseModel):
+classExtrated(BaseModel):
     text_content: Optional[str]
     action_items: Optional[List[Dict[str, Any]]]
     sentiment: Optional[str]

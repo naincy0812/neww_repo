@@ -10,7 +10,7 @@ from typing import Optional
 client: Optional[AsyncIOMotorClient] = None
 db = None
 
-async def init_db():
+async def init_db):
     global client, db
     client = AsyncIOMotorClient(settings.MONGODB_URL)
     # Always connect to the explicit database name from Settings to avoid inconsistencies

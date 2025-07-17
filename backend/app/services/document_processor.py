@@ -6,7 +6,7 @@ from PyPDF2 import PdfReader
 from docx import Document
 from openpyxl import load_workbook
 from pathlib import Path
-from datetime import datetime
+from datetimort datetime
 import mimetypes
 
 # File size limit in bytes (50MB)
@@ -86,7 +86,7 @@ class DocumentProcessor:
                         "error": f"Invalid XLSX file: {str(e)}"
                     }
 
-            return {
+            retur
                 "valid": True,
                 "mime_type": mime_type,
                 "size": file_size,

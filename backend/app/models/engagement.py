@@ -4,7 +4,7 @@ from datetime import datetime
 from bson import ObjectId
 from beanie import Document
  
-class MSA(BaseModel):
+class MSABaseModel):
     reference: Optional[str] = None
     value: Optional[float] = None
     startDate: Optional[datetime] = None
