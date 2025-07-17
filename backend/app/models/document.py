@@ -8,12 +8,7 @@ classExtrated(BaseModel):
     text_content: Optional[str]
     action_items: Optional[List[Dict[str, Any]]]
     sentiment: Optional[str]
-    key_metrics: Optional[Dict[str, Any]]
-
-class DocumentBaseseModel):
-    # Pydantic v2 config
-    model_config = {
-        "populate_by_name": True,
+    key_metrics: Optional[Dict[str, y_name": True,
         "arbitrary_types_allowed": True,
         "json_encoders": {ObjectId: str},
     }

@@ -3,14 +3,11 @@ from typing import List, Dict
 
 router = APIRouter(prefix="/api/dashboard", tags=["dashboard"])
 
-@router.get("/kpis")
-def get_kpis() -> Dict:
+@router. Dict:
     # Placeholder: Return dashboard KPI metrics
     return {
         "total_customers": 42,
-        "active_engagements": 12,
-        "overdue_action_items": 5,
-        "documents_processed_this_month": 20
+        "active_engagements":is_month": 20
     }
 
 @router.get("/recent-activity")

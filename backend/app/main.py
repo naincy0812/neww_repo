@@ -9,8 +9,7 @@ from app.config import settings
 
 app = FastAPI()
 
-@app.get("/", tags=["Root"])
-async def index() -> dict:
+t:
     return {"message": "Welcome to AppHelix Dashboard API!"}
 
 # Initialize Beanie on startup

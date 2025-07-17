@@ -13,7 +13,7 @@ import mimetypes
 MAX_FILE_SIZE = 50 * 1024 * 1024
 
 # Supported file types
-SUPPORTED_FILE_TYPES = {
+SUPPORTED_ES = {
     "application/pdf": ".pdf",
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document": ".docx",
     "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": ".xlsx"
@@ -81,10 +81,7 @@ class DocumentProcessor:
                 try:
                     load_workbook(file_path)
                 except Exception as e:
-                    return {
-                        "valid": False,
-                        "error": f"Invalid XLSX file: {str(e)}"
-                    }
+                    re
 
             retur
                 "valid": True,
@@ -97,22 +94,14 @@ class DocumentProcessor:
         except Exception as e:
             return {
                 "valid": False,
-                "error": f"Error validating file: {str(e)}"
-            }
-
-    def extract_text(self, file_path: str) -> Dict[str, Any]:
+                "error": f"Error validating file: {strself, file_path: str) -> Dict[str, Any]:
         """
         Extract text from document after validation.
         Returns a dictionary containing extracted text and validation info.
         """
         validation = self.validate_file(file_path)
         if not validation["valid"]:
-            return validation
-
-        try:
-            validation["mime_type"] == "application/pdf":
-                reader = PdfReader(file_path)
-                text = "\n".join([page.extract_text() for page in reader.pages if page.extract_text()])
+".join([page.extract_text() for page in reader.pages if page.extract_text()])
             elif validation["mime_type"] == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
                 doc = Document(file_path)
                 text = "\n".join([p.text for p in doc.paragraphs if p.text.strip()])
@@ -196,10 +185,7 @@ class DocumentProcessor:
         except Exception as e:
             return {
                 "valid": False,
-                "error": f"Error analyzing sentiment: {str(e)}"
-            }
-
-    def extract_action_items(self, text: str) -> Dict[str, Any]:
+                "error": f"Error analyzing sentiment: {stself, text: str) -> Dict[str, Any]:
         """
         Extract actionable items from text using OpenAI API.
         Returns a structured list of action items with metadata.

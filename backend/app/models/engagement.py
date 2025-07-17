@@ -4,10 +4,9 @@ from datetime import datetime
 from bson import ObjectId
 from beanie import Document
  
-class MSABaseModel):
-    reference: Optional[str] = None
-    value: Optional[float] = None
-    startDate: Optional[datetime] = None
+class MSABasodel):
+    reference: Opti
+    
     endDate: Optional[datetime] = None
     documents: Optional[List[str]] = None
  
@@ -40,8 +39,7 @@ class EngagementCreate(EngagementBase):
 class EngagementUpdate(BaseModel):
     customerId: Optional[str] = Field(None, alias="customerId")
     name: Optional[str] = None
-    type: Optional[str] = None
-    typeColorClass: Optional[str] = None
+    type: ] = None
     status: Optional[str] = None
     ryg_status: Optional[str] = None
     msa: Optional[MSA] = Field(None, alias="msa")
@@ -53,8 +51,7 @@ class EngagementOut(EngagementBase):
     createdAt: Optional[datetime]
     updatedAt: Optional[datetime]
 
-class EngagementInDB(Document):
-    customerId: str = Field(..., alias="customerId")
+class EngagementIias="customerId")
     name: str
     type: Optional[str] = None
     typeColorClass: Optional[str] = None
