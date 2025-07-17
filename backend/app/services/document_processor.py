@@ -110,7 +110,7 @@ class DocumentProcessor:
             return validation
 
         try:
-            if validation["mime_type"] == "application/pdf":
+            validation["mime_type"] == "application/pdf":
                 reader = PdfReader(file_path)
                 text = "\n".join([page.extract_text() for page in reader.pages if page.extract_text()])
             elif validation["mime_type"] == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":

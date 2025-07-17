@@ -10,7 +10,7 @@ classExtrated(BaseModel):
     sentiment: Optional[str]
     key_metrics: Optional[Dict[str, Any]]
 
-class DocumentBase(BaseModel):
+class DocumentBaseseModel):
     # Pydantic v2 config
     model_config = {
         "populate_by_name": True,
